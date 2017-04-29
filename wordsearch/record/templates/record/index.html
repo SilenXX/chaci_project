@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+        Word Record
+        </title>
+        <body>
+            <h1>Word List</h1>
+            {% if all_word_list %}
+                <ul>
+                {% for word in all_word_list %}
+                    <td>{{ word.word_text }} {{ word.word_num }}</td><br/>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No words have been searched.</p>
+            {% endif %}
+        </body>
+    </head>
+</html>
